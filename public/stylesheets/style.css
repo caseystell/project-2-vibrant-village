@@ -1,8 +1,17 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* font-family: 'Amethysta', serif;
+font-family: 'Delius Unicase', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Josefin Sans', sans-serif; */
+
+* {
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body {
+  height: 100vh;
+}
+
+#house-logo {
+  height: 25px;
+  width: 25px;
 }
