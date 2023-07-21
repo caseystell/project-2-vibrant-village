@@ -22,6 +22,10 @@ const fulfillmentSchema = new Schema({
 });
   
 const childSchema = new Schema({
+    childCare: {
+        type: Boolean,
+        default: false,
+    },
     date: {
         type: Date,
         min: function() {

@@ -1,0 +1,61 @@
+<%- include("../partials/header") %>
+
+<h3>Request Care</h3>
+<h5>Please provide the following care information:</h5>
+<form id="starter-form" action="/" method="POST"> <!-- figure out the correct action -->
+    <label id="top-label">I need</label>
+    <label>Pet care</label>
+    <input type="checkbox" name="petCare" unchecked>
+    <label>Child care</label>
+    <input type="checkbox" name="childCare" unchecked>
+</form>
+
+<!-- <% if (petCare = checked) { %> figure this out -->
+
+    <form id="new-form" action="/pets" method="POST">
+        <label>Date of care</label>
+        <input type="date" name="date">
+        <label>Time of care</label>
+        <input type="time" name="time">
+        <label>Location</label>
+        <input type="text" name="location">
+        <label>Type of pets
+            <select name="typeOfPets">
+                <option value="Bird">Bird</option>
+                <option value="Cat">Cat</option>
+                <option value="Dog">Dog</option>
+                <option value="Fish">Fish</option>
+                <option value="Rabbit">Rabbit</option>
+                <option value="Rat">Rat</option>
+            </select>
+        </label><br>
+        <label>Number of pets</label>
+        <input type="number" name="numOfPets">
+        <label>Names & ages of pets</label>
+        <input type="text" name="namesAgesOfPets">
+        <label>Special instructions</label>
+        <input type="text" name="specialInstructions">
+        <input type="submit" value="Submit care request">
+    </form>
+
+<!-- <% } if (childCare = checked) { %> -->
+
+    <form id="new-form" action="/children" method="POST">
+        <label>Date of care</label>
+        <input type="date" name="date">
+        <label>Time of care</label>
+        <input type="time" name="time">
+        <label>Location</label>
+        <input type="text" name="location">
+        <label>Number of kids</label>
+        <input type="number" name="numOfKids">
+        <label>Names & ages of kids</label>
+        <input type="text" name="namesAgesOfKids">
+        <label>Special instructions</label>
+        <input type="text" name="specialInstructions">
+        <input type="submit" value="Submit care request">
+    </form>
+
+<!-- <% } %> -->
+
+<%- include("../partials/footer") %>

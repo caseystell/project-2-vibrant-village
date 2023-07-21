@@ -12,5 +12,12 @@
 <body>
     <img src="../../public/images/Screenshot 2023-07-21 at 11.00.57 AM.png" alt="house-logo" id="house-logo" >
     <h1>Vibrant Village</h1>
-    <h2>Providing free community-centered care to your neighborhood since 2023</h2>
+    <h4>Providing free community-centered care to your neighborhood since 2023</h4>
+    <nav>
+        <% if (user) { %>
+          <a href="/logout">Log out</a>
+        <% } else { %>
+          <a href="/auth/google" class="login">Log in&nbsp;</a>
+        <% } %>
+      </nav>
     

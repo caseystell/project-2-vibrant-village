@@ -22,6 +22,10 @@ const fulfillmentSchema = new Schema({
 });
   
 const petSchema = new Schema({
+    petCare: {
+        type: Boolean,
+        default: false,
+    },
     date: {
         type: Date,
         min: function() {
