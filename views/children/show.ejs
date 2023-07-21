@@ -1,4 +1,53 @@
 <%- include("../partials/header") %>
 
+<% if (children.childCare) { %>
+
+    <section id="child-show-page">
+        <div>User </div>
+        <div><%= child.user %></div>
+        <div>Care Type </div>
+        <div>Child</div>
+        <div>Date </div>
+        <div><%= child.date %></div>
+        <div>Time </div>
+        <div><%= child.time %></div>
+        <div>Location </div>
+        <div><%= child.location %></div>
+        <div>Number of Kids </div>
+        <div><%= child.numOfKids %></div>
+        <div>Names & Ages of Kids </div>
+        <div><%= child.namesAgesOfKids %></div>
+        <div>Special Instructions </div>
+        <div><%= child.specialInstructions %></div>
+        <input class="btn" type="submit" value="Fulfill care request">
+    </section>
+
+<% } %>
+
+<% if (pets.petCare) { %>
+
+    <section id="pet-show-page">
+        <div>User </div>
+        <div><%= pet.user %></div>
+        <div>Care Type </div>
+        <div>Pet</div>
+        <div>Date </div>
+        <div><%= pet.date %></div>
+        <div>Time </div>
+        <div><%= pet.time %></div>
+        <div>Location </div>
+        <div><%= pet.location %></div>
+        <div>Type of Pets </div>
+        <div><%= pet.typeOfPets %></div>
+        <div>Number of Pets </div>
+        <div><%= pet.numOfPets %></div>
+        <div>Names & Ages of Pets </div>
+        <div><%= pet.namesAgesOfPets %></div>
+        <div>Special Instructions </div>
+        <div><%= pet.specialInstructions %></div>
+        <input class="btn" type="submit" value="Fulfill care request">
+    </section>
+
+<% } %>
 
 <%- include("../partials/footer") %>

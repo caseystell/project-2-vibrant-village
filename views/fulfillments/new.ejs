@@ -1,0 +1,13 @@
+<%- include("../partials/header") %>
+
+<%= title %>
+
+<form id="new-fulfillment-form" action="/fulfillments" method="POST">
+    <label>Name</label>
+    <input type="text" name="name">
+    <label>Phone</label>
+    <input type="number" name="phone">
+    <input type="submit" value="Fulfill this request!">
+</form>
+
+<%- include("../partials/footer") %>

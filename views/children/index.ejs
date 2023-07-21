@@ -1,5 +1,49 @@
 <%- include("../partials/header") %>
 
+<%= title %>
 
+<table id="list">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Care Type</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Location</th>
+        <th>Fulfilled?</th>
+        <th></th>
+      </tr>
+    </thead>
+    <% if (children.childCare) { %>
+        <tbody>
+            <% children.forEach(function(child) { %>
+                <tr>
+                    <td><%= child.user %></td>
+                    <td>Child</td>
+                    <td><%= child.date %></td>
+                    <td><%= child.time %></td>
+                    <td><%= child.location %></td>
+                    <td><%= child.fulfilled %></td>
+                    <td><a href="/children/<%= child._id %>">Details</a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    <% } %>
+    <% if (pets.petCare) { %>
+        <tbody>
+            <% pets.forEach(function(pet) { %>
+                <tr>
+                    <td><%= pet.user %></td>
+                    <td>Pet</td>
+                    <td><%= pet.date %></td>
+                    <td><%= pet.time %></td>
+                    <td><%= pet.location %></td>
+                    <td><%= pet.fulfilled %></td>
+                    <td><a href="/pets/<%= pet._id %>">Details</a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    <% } %> 
+</table>
 
 <%- include("../partials/footer") %>

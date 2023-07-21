@@ -1,7 +1,4 @@
-/* font-family: 'Amethysta', serif;
-font-family: 'Delius Unicase', cursive;
-font-family: 'Inter', sans-serif;
-font-family: 'Josefin Sans', sans-serif; */
+/* font-family: 'Inter', sans-serif; */
 
 * {
   box-sizing: border-box;
@@ -15,3 +12,56 @@ body {
   height: 25px;
   width: 25px;
 }
+
+h1, h2 {
+  font-family: 'Delius Unicase', cursive;
+  color: rgb(255, 109, 39);
+  font-size: 3vmin;
+}
+
+h1 {
+  font-size: 5vmin;
+  letter-spacing: 0.5vmin;
+}
+
+h4 {
+  font-family: 'Amethysta', serif;
+  font-size: 1.5vmin;
+}
+
+.home-page > h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  font-weight: lighter;
+  font-size: 4vmin;
+}
+
+input {
+  background-color: rgb(255, 229, 212);
+  border-radius: 5%;
+  border-color: rgb(255, 229, 212);
+  color: rgb(255, 109, 39);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2vmin;
+  border: 1px;
+  padding: 10px;
+}
+
+.btn:hover {
+  background-color: rgba(11, 0, 159, 0.2);
+  color: rgb(11, 0, 159);
+  cursor: pointer;
+}
+
+.login, .logout {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2vmin;
+  font-weight: lighter;
+  color: black;
+  text-decoration: none;
+}
+
+.login:hover, .logout:hover {
+  text-decoration: underline;
+}
+

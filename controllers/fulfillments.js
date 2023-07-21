@@ -6,3 +6,10 @@ module.exports = {
   delete: deleteRequest,
 };
 
+function create(req, res) {
+
+}
+
+function deleteRequest(req, res) {
+  
+}
