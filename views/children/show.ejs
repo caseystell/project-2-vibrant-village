@@ -21,7 +21,15 @@
         <div><%= child.namesAgesOfKids %></div>
         <div>Special Instructions </div>
         <div><%= child.specialInstructions %></div>
-        <input onclick="location.href='/children/<%= child._id %>/fulfillments';" class="btn" type="button" value="Fulfill care request" />
+        <div>Fulfilled? </div>
+        <div>
+            <% if (child.fulfilled.length) { %>
+                <a href="/fulfillments/<%= child.fulfilled._id %>">Yes</a>
+            <% } else { %>
+                No
+            <% } %>
+        </div>
+        <input onclick="location.href='/children/<%= child._id %>/fulfillments/new';" class="btn" type="button" value="Fulfill care request" />
     </section>
 
 <% // } %>

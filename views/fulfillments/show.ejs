@@ -1,0 +1,38 @@
+<%- include("../partials/header") %>
+
+<h2><%= title %></h2>
+
+<section id="fulfillment-show-page">
+    <% if (child.fulfilled.length) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Date Fulfilled</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% child.fulfilled.forEach(function(f) { %>
+              <tr>
+                <td class="fulfillment-user"><img alt="avatar" src="<%= f.userAvatar %>" referrerpolicy="no-referrer" ><%= f.userName %></td>
+                <td><%= f.createdAt.toLocaleDateString() %></td>
+                <td><%= f.name %></td>
+                <td><%= f.phone %></td>
+                <td>
+                  <% if (user?._id.equals(f.user)) { %>
+                    <form action="/fulfillments/<%= f._id %>?_method=DELETE" method="POST">
+                      <button type="submit">X</button>
+                    </form>
+                  <% } %>
+                </td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+    <% } %>
+</section>
+
+<%- include("../partials/footer") %>

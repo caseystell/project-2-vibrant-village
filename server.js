@@ -47,7 +47,7 @@ app.use(function (req, res, next) {
 app.use('/', indexRouter);
 app.use('/children', childrenRouter);
 app.use('/pets', petsRouter);
-app.use('/fulfillments', fulfillmentsRouter); // might be the wrong route
+app.use('/', fulfillmentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
