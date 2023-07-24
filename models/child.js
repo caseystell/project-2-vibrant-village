@@ -2,12 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const fulfillmentSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
-    },
     phone: {
         type: Number,
+        pattern: /^(\+0?1\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
         required: true,
     },
     user: {

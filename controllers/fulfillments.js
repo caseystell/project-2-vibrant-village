@@ -2,10 +2,17 @@ const Child = require("../models/child");
 const Pet = require("../models/pet");
 
 module.exports = {
+  show,
   create,
   new: newFulfillment,
   delete: deleteRequest,
 };
+
+async function show(req, res) {
+  const child = await Child.findById(req.params.id);
+  const fulfillmentID = child.fullfilled?._id
+  res.render("fulfillments/show", { title: "Fulfillment Details", child, fulfillmentID });
+}
 
 async function newFulfillment(req, res) {
   const child = await Child.findById(req.params.id);

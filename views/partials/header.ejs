@@ -11,10 +11,10 @@
 </head>
 <body>
   <nav>
-    <img src="../../public/images/Screenshot 2023-07-21 at 11.00.57 AM.png" alt="house-logo" id="house-logo" >
+    <!-- <img src="../../public/images/Screenshot 2023-07-21 at 11.00.57 AM.png" alt="house-logo" id="house-logo" > -->
     <h1><a id="home-link" href="/">Vibrant Village</a></h1>
       <% if (user) { %>
-        <a href="/logout">Log out</a>
+        <a href="/logout" class="logout">Log out</a>
       <% } else { %>
         <a href="/auth/google" class="login">Log in</a>
       <% } %>

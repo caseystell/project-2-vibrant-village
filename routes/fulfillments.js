@@ -7,6 +7,8 @@ const ensureLoggedIn = require("../config/ensureLoggedIn");
 
 // GET /children/:id/fulfillments/new
 router.get("/children/:id/fulfillments/new", ensureLoggedIn, fulfillmentsCtrl.new);
+// GET /children/:id (show functionality)
+router.get("/children/:id/fulfillments", ensureLoggedIn, fulfillmentsCtrl.show);
 // POST /children/:id/fulfillments
 router.post("/children/:id/fulfillments", ensureLoggedIn, fulfillmentsCtrl.create);
 // DELETE /fulfillments

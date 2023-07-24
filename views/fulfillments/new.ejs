@@ -1,10 +1,8 @@
 <%- include("../partials/header") %>
 
-<%= title %>
+<h2><%= title %></h2>
 
 <form id="new-fulfillment-form" action="/children/<%= child._id %>/fulfillments" method="POST">
-    <label>Name</label>
-    <input type="text" name="name">
     <label>Phone</label>
     <input type="number" name="phone">
     <input class="btn" type="submit" value="Fulfill this request!">

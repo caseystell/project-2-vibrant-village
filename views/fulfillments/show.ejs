@@ -9,7 +9,6 @@
             <tr>
               <th>User</th>
               <th>Date Fulfilled</th>
-              <th>Name</th>
               <th>Phone</th>
               <th></th>
             </tr>
@@ -19,7 +18,6 @@
               <tr>
                 <td class="fulfillment-user"><img alt="avatar" src="<%= f.userAvatar %>" referrerpolicy="no-referrer" ><%= f.userName %></td>
                 <td><%= f.createdAt.toLocaleDateString() %></td>
-                <td><%= f.name %></td>
                 <td><%= f.phone %></td>
                 <td>
                   <% if (user?._id.equals(f.user)) { %>
@@ -33,7 +31,8 @@
           </tbody>
         </table>
     <% } %>
-    <input onclick="location.href='/children/<%= child._id %>';" class="btn" type="button" value="Back to all requests"  />
+    <input onclick="location.href='/children/<%= child._id %>';" class="btn" type="button" value="Back to care request"  />
+    <input onclick="location.href='/children';" class="btn" type="button" value="See all care requests"  />
 </section>
 
 <%- include("../partials/footer") %>
