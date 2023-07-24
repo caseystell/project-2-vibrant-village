@@ -84,3 +84,18 @@ input {
   text-decoration: underline;
 }
 
+table thead th {
+  padding: 2vmin 3vmin 2vmin 3vmin;
+  border-bottom: 2px solid rgb(255, 109, 39);
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.5vmin;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 2vmin;
+}

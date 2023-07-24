@@ -7,7 +7,7 @@
 <table id="list">
     <thead>
       <tr>
-        <th>User</th>
+        <th>Requested By</th>
         <th>Care Type</th>
         <th>Date</th>
         <th>Time</th>
@@ -22,7 +22,7 @@
                 <tr>
                     <td class="request-user"><img src="<%= child.userAvatar %>" alt="avatar" referrerpolicy="no-referrer" ><%= child.userName %></td>
                     <td>Child</td>
-                    <td><%= child.date %></td>
+                    <td><%= child.date.toLocaleDateString() %></td>
                     <td><%= child.time %></td>
                     <td><%= child.location %></td>
                     <td>
@@ -32,7 +32,7 @@
                             No
                         <% } %>
                     </td>
-                    <td><a href="/children/<%= child._id %>">Details</a></td>
+                    <td><input onclick="location.href='/children/<%= child._id %>';" class="btn" type="button" value="Details" /></td>
                 </tr>
             <% }); %>
         </tbody>
