@@ -1,16 +1,23 @@
-/* font-family: 'Inter', sans-serif; */
-
 * {
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
   height: 100vh;
 }
 
+body > nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
 #house-logo {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
 }
 
 h1, h2 {
@@ -22,11 +29,15 @@ h1, h2 {
 h1 {
   font-size: 5vmin;
   letter-spacing: 0.5vmin;
+  display: flex;
+  align-self: flex-start;
 }
 
 h4 {
   font-family: 'Amethysta', serif;
   font-size: 1.5vmin;
+  display: block;
+  
 }
 
 .home-page > h2 {
@@ -59,6 +70,7 @@ input {
   font-weight: lighter;
   color: black;
   text-decoration: none;
+  text-align: right;
 }
 
 .login:hover, .logout:hover {

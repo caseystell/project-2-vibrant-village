@@ -10,14 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Delius+Unicase&family=Inter&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav>
     <img src="../../public/images/Screenshot 2023-07-21 at 11.00.57 AM.png" alt="house-logo" id="house-logo" >
     <h1>Vibrant Village</h1>
-    <h4>Providing free community-centered care to your neighborhood since 2023</h4>
-    <nav>
-        <% if (user) { %>
-          <a href="/logout">Log out</a>
-        <% } else { %>
-          <a href="/auth/google" class="login">Log in</a>
-        <% } %>
-    </nav>
+      <% if (user) { %>
+        <a href="/logout">Log out</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">Log in</a>
+      <% } %>
+  </nav>
+  <h4>Providing free community-centered care to your neighborhood since 2023</h4>
+  
     

@@ -1,6 +1,7 @@
 <%- include("../partials/header") %>
 
-<h3>Request Care</h3>
+<h2> <%= title %> </h2>
+
 <h5>Please provide the following care information:</h5>
 <form id="starter-form" action="/" method="POST"> <!-- figure out the correct action -->
     <label id="top-label">I need</label>
@@ -10,9 +11,9 @@
     <input class="btn" type="checkbox" name="childCare" unchecked>
 </form>
 
-<!-- <% if (petCare = checked) { %> figure this out -->
+<!-- <% // if (petCare = checked) { %> figure this out -->
 
-    <form id="new-pet-request-form" action="/pets" method="POST">
+    <!-- <form id="new-petcare-request-form" action="/pets/new" method="POST">
         <label>Date of care</label>
         <input type="date" name="date">
         <label>Time of care</label>
@@ -36,11 +37,11 @@
         <label>Special instructions</label>
         <input type="text" name="specialInstructions">
         <input class="btn" type="submit" value="Submit care request">
-    </form>
+    </form> -->
 
-<!-- <% } if (childCare = checked) { %> -->
+<!-- <% // } if (childCare = checked) { %> -->
 
-    <form id="new-child-request-form" action="/children" method="POST">
+    <form id="new-childcare-request-form" action="/children" method="POST">
         <label>Date of care</label>
         <input type="date" name="date">
         <label>Time of care</label>
@@ -56,6 +57,6 @@
         <input class="btn" type="submit" value="Submit care request">
     </form>
 
-<!-- <% } %> -->
+<!-- <% // } %> -->
 
 <%- include("../partials/footer") %>

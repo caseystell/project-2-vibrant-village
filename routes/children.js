@@ -3,13 +3,15 @@ var router = express.Router();
 const childrenCtrl = require("../controllers/children");
 const ensureLoggedIn = require("../config/ensureLoggedIn");
 
+// All routes start with /children
+
 // GET /children
-router.get("/children", childrenCtrl.index);
+router.get("/", ensureLoggedIn, childrenCtrl.index);
 // GET /children/new
-router.get("/children/new", ensureLoggedIn, childrenCtrl.new);
+router.get("/new", ensureLoggedIn, childrenCtrl.new);
 // GET /children/:id (show functionality)
-router.get("/children/:id", childrenCtrl.show);
+router.get("/:id", ensureLoggedIn, childrenCtrl.show);
 // POST /children
-router.post("/children", ensureLoggedIn, childrenCtrl.create);
+router.post("/", ensureLoggedIn, childrenCtrl.create);
 
 module.exports = router;
