@@ -11,12 +11,12 @@ module.exports = {
 async function show(req, res) {
   const child = await Child.findById(req.params.id);
   const fulfillmentID = child.fullfilled?._id
-  res.render("fulfillments/show", { title: "Fulfillment Details", child, fulfillmentID });
+  res.render("fulfillments/show", { title: "Care Provider Details", child, fulfillmentID });
 }
 
 async function newFulfillment(req, res) {
   const child = await Child.findById(req.params.id);
-  res.render("fulfillments/new", { title: "Fulfill Care Request", child, errorMsg: '' });
+  res.render("fulfillments/new", { title: "Provide Care", child, errorMsg: '' });
 }
 
 async function create(req, res) {

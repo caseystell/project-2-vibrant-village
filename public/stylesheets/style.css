@@ -57,7 +57,7 @@ h4 {
   text-align: left;
 }
 
-.home-page > h2 {
+.home-page > h2, #top-label {
   font-family: 'Josefin Sans', sans-serif;
   color: black;
   font-weight: lighter;
@@ -104,7 +104,9 @@ table thead th {
   border-bottom: 2px solid rgb(255, 109, 39);
   font-weight: bold;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 2.5vmin;
+  font-size: 2.25vmin;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table td {
@@ -124,4 +126,23 @@ h5 {
   font-size: 1.5vmin;
   font-style: italic;
   margin-bottom: 5px;
+}
+
+footer {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5vmin;
+  font-weight: lighter;
+  margin: auto;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.type-of-care {
+  color: rgb(255, 109, 39);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2vmin;
+  margin: 5vmin 0 5vmin 5vmin;
 }

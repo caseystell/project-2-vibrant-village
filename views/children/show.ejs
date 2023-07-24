@@ -30,9 +30,9 @@
             <% } %>
         </div>
         <% if (child.fulfilled.length) { %>
-            <input style="display: none;" class="btn" type="button" value="Fulfill care request" />
+            <input style="display: none;" class="btn" type="button" value="Provide care" />
         <% } else { %>
-            <input onclick="location.href='/children/<%= child._id %>/fulfillments/new';" class="btn" type="button" value="Fulfill care request" />
+            <input onclick="location.href='/children/<%= child._id %>/fulfillments/new';" class="btn" type="button" value="Provide care" />
         <% } %>
         <input onclick="location.href='/children';" class="btn" type="button" value="See all care requests" />
     </section>
@@ -60,7 +60,7 @@
         <div><%= // pet.namesAgesOfPets %></div>
         <div>Special Instructions </div>
         <div><%= // pet.specialInstructions %></div>
-        <input class="btn" type="submit" value="Fulfill care request">
+        <input class="btn" type="submit" value="Provide care">
     </section> -->
 
 <% // } %>
