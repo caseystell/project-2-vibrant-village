@@ -2,6 +2,8 @@
 
 <h2><%= title %></h2>
 
+<input onclick="location.href='/children/new';" class="btn" type="button" value="New care request" />
+
 <table id="list">
     <thead>
       <tr>
@@ -18,12 +20,18 @@
         <tbody>
             <% children.forEach(function(child) { %>
                 <tr>
-                    <td><%= child.user %></td>
+                    <td class="request-user"><img src="<%= child.userAvatar %>" alt="avatar" referrerpolicy="no-referrer" ><%= child.userName %></td>
                     <td>Child</td>
                     <td><%= child.date %></td>
                     <td><%= child.time %></td>
                     <td><%= child.location %></td>
-                    <td><%= child.fulfilled %></td>
+                    <td>
+                        <% if (child.fulfilled.length) { %>
+                            <a href="children/<%= child._id %>/fulfillments">Yes</a>
+                        <% } else { %>
+                            No
+                        <% } %>
+                    </td>
                     <td><a href="/children/<%= child._id %>">Details</a></td>
                 </tr>
             <% }); %>

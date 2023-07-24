@@ -20,17 +20,24 @@ body > nav {
   width: 30px;
 }
 
-h1, h2 {
+h2 {
   font-family: 'Delius Unicase', cursive;
   color: rgb(255, 109, 39);
   font-size: 3vmin;
 }
 
-h1 {
+#home-link, #home-link:focus, #home-link:active {
+  font-family: 'Delius Unicase', cursive;
+  color: rgb(255, 109, 39);
+  text-decoration: none;
   font-size: 5vmin;
   letter-spacing: 0.5vmin;
   display: flex;
   align-self: flex-start;
+}
+
+h1:hover {
+  cursor: pointer;
 }
 
 h4 {

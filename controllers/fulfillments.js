@@ -8,7 +8,8 @@ module.exports = {
 };
 
 async function newFulfillment(req, res) {
-  res.render("fulfillments/new", { title: "Fulfill Care Request", errorMsg: '' });
+  const child = await Child.findById(req.params.id);
+  res.render("fulfillments/new", { title: "Fulfill Care Request", child, errorMsg: '' });
 }
 
 async function create(req, res) {

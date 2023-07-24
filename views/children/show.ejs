@@ -24,12 +24,17 @@
         <div>Fulfilled? </div>
         <div>
             <% if (child.fulfilled.length) { %>
-                <a href="/fulfillments/<%= child.fulfilled._id %>">Yes</a>
+                <a href="/children/<%= child._id %>/fulfillments">Yes</a>
             <% } else { %>
                 No
             <% } %>
         </div>
-        <input onclick="location.href='/children/<%= child._id %>/fulfillments/new';" class="btn" type="button" value="Fulfill care request" />
+        <% if (child.fulfilled.length) { %>
+            <input style="display: none;" class="btn" type="button" value="Fulfill care request" />
+        <% } else { %>
+            <input onclick="location.href='/children/<%= child._id %>/fulfillments/new';" class="btn" type="button" value="Fulfill care request" />
+        <% } %>
+        <input onclick="location.href='/children';" class="btn" type="button" value="See all care requests" />
     </section>
 
 <% // } %>
