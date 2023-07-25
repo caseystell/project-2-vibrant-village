@@ -10,6 +10,7 @@
               <th>Care Provider</th>
               <th>Date Fulfilled</th>
               <th>Phone</th>
+              <th>Details</th>
               <th></th>
             </tr>
           </thead>
@@ -19,6 +20,7 @@
                 <td class="fulfillment-user"><%= f.userName %></td>
                 <td><%= f.createdAt.toLocaleDateString() %></td>
                 <td><%= f.phone %></td>
+                <td><%= f.details %></td>
                 <td>
                   <% if (user?._id.equals(f.user)) { %>
                     <form action="/fulfillments/<%= f._id %>?_method=DELETE" method="POST">

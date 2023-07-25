@@ -7,6 +7,7 @@ const fulfillmentSchema = new Schema({
         pattern: /^(\+0?1\s?)?\(?\d{3}\d{3}\d{4}/,
         required: true,
     },
+    details: String,
     user: {
       type: Schema.Types.ObjectId,
       ref: "User",
