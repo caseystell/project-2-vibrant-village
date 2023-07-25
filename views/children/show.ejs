@@ -2,8 +2,6 @@
 
 <h2><%= title %></h2>
 
-<% // if (children.childCare) { %>
-
     <section id="child-show-page">
         <div>User </div>
         <div><%= child.user %></div>
@@ -36,46 +34,5 @@
         <% } %>
         <input onclick="location.href='/children';" class="btn" type="button" value="See all child care requests" />
     </section>
-
-<% // } %>
-
-<% // if (pets.petCare) { %>
-
-    <section id="pet-show-page">
-        <div>User </div>
-        <div><%= pet.user %></div>
-        <div>Care Type </div>
-        <div>Pet</div>
-        <div>Date </div>
-        <div><%= pet.date.toLocaleDateString() %></div>
-        <div>Time </div>
-        <div><%= pet.time %></div>
-        <div>Location </div>
-        <div><%= pet.location %></div>
-        <div>Type of Pet </div>
-        <div><%= pet.typeOfPets %></div>
-        <div>Number of Pets </div>
-        <div><%= pet.numOfPets %></div>
-        <div>Names & Ages of Pets </div>
-        <div><%= pet.namesAgesOfPets %></div>
-        <div>Special Instructions </div>
-        <div><%= pet.specialInstructions %></div>
-        <div>Fulfilled? </div>
-        <div>
-            <% if (pet.fulfilled.length) { %>
-                <a href="/pets/<%= pet._id %>/fulfillments">Yes</a>
-            <% } else { %>
-                No
-            <% } %>
-        </div>
-        <% if (pet.fulfilled.length) { %>
-            <input style="display: none;" class="btn" type="button" value="Provide care" />
-        <% } else { %>
-            <input onclick="location.href='/pets/<%= pet._id %>/fulfillments/new';" class="btn" type="button" value="Provide care" />
-        <% } %>
-        <input onclick="location.href='/pets';" class="btn" type="button" value="See all pet care requests" />
-    </section>
-
-<% // } %>
 
 <%- include("../partials/footer") %>

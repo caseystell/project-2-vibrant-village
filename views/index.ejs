@@ -3,16 +3,9 @@
 <div class="home-page">
   <h2>I want to...</h2>
   <br>
-  <input id="req-care-btn" class="btn home-btn" type="button" value="Request care" />
+  <input id="req-care-btn" class="btn home-btn" onclick="location.href='/children/new';" type="button" value="Request care" />
   <input class="btn home-btn" onclick="location.href='/children';" type="button" value="Provide care" />
   <br>
-  <div id="show-choices-menu" style="visibility: hidden;">
-    <h2>What type of care are you looking for?</h2>
-    <br>
-    <input class="btn choice-btn" onclick="location.href='/children/new';" type="button" value="Child care" />
-    <input class="btn choice-btn" onclick="location.href='/pets/new';" type="button" value="Pet care" />
-  </div>
-
 </div>
 
 <%- include('./partials/footer') %>

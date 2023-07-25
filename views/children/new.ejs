@@ -3,60 +3,21 @@
 <h2>Request Care</h2>
 
 <h5>Please provide the following care information:</h5>
-<form id="starter-form" action="/children" method="POST"> <!-- figure out the correct action -->
-    <label id="top-label">I need</label>
-    <label class="type-of-care" >Pet care</label>
-    <input class="btn" type="checkbox" name="petCare" unchecked>
-    <label class="type-of-care" >Child care</label>
-    <input class="btn" type="checkbox" name="childCare" unchecked>
+
+<form id="new-childcare-request-form" action="/children" method="POST">
+    <label>Date of care</label>
+    <input type="date" name="date"><br>
+    <label>Time of care</label>
+    <input type="time" name="time"><br>
+    <label>Location</label>
+    <input type="text" name="location"><br>
+    <label>Number of kids</label>
+    <input type="number" name="numOfKids"><br>
+    <label>Names & ages of kids</label>
+    <input type="text" name="namesAgesOfKids"><br>
+    <label>Special instructions</label>
+    <input type="text" name="specialInstructions"><br>
+    <input class="btn" type="submit" value="Submit child care request">
 </form>
-
-<!-- <% // if (petCare = checked) { %> figure this out -->
-
-    <form id="new-petcare-request-form" action="/pets" method="POST">
-        <label>Date of care</label>
-        <input type="date" name="date">
-        <label>Time of care</label>
-        <input type="time" name="time">
-        <label>Location</label>
-        <input type="text" name="location">
-        <label>Type of pet
-            <select name="typeOfPets">
-                <option value="Bird">Bird</option>
-                <option value="Cat">Cat</option>
-                <option value="Dog">Dog</option>
-                <option value="Fish">Fish</option>
-                <option value="Rabbit">Rabbit</option>
-                <option value="Rat">Rat</option>
-            </select>
-        </label><br>
-        <label>Number of pets</label>
-        <input type="number" name="numOfPets">
-        <label>Names & ages of pets</label>
-        <input type="text" name="namesAgesOfPets">
-        <label>Special instructions</label>
-        <input type="text" name="specialInstructions">
-        <input class="btn" type="submit" value="Submit pet care request">
-    </form>
-
-<!-- <% // } if (childCare = checked) { %> -->
-
-    <form id="new-childcare-request-form" action="/children" method="POST">
-        <label>Date of care</label>
-        <input type="date" name="date"><br>
-        <label>Time of care</label>
-        <input type="time" name="time"><br>
-        <label>Location</label>
-        <input type="text" name="location"><br>
-        <label>Number of kids</label>
-        <input type="number" name="numOfKids"><br>
-        <label>Names & ages of kids</label>
-        <input type="text" name="namesAgesOfKids"><br>
-        <label>Special instructions</label>
-        <input type="text" name="specialInstructions"><br>
-        <input class="btn" type="submit" value="Submit child care request">
-    </form>
-
-<!-- <% // } %> -->
 
 <%- include("../partials/footer") %>

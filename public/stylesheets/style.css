@@ -139,10 +139,3 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
-
-.type-of-care {
-  color: rgb(255, 109, 39);
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2vmin;
-  margin: 5vmin 0 5vmin 5vmin;
-}

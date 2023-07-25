@@ -14,8 +14,8 @@ async function index(req, res) {
 
 async function show(req, res) {
   const child = await Child.findById(req.params.id);
-  const fulfillmentID = child.fullfilled?._id
-  res.render("children/show", { title: "Care Request Details", child, fulfillmentID });
+  const childFulfillmentID = child.fullfilled?._id;
+  res.render("children/show", { title: "Care Request Details", child, childFulfillmentID });
 }
 
 function newChildcareRequest(req, res) {
