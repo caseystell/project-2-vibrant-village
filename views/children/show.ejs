@@ -4,24 +4,24 @@
 
     <section id="child-show-page" class="row">
         <div class="column">
-            <div class="title">User </div>
-            <div class="request-user info"><img src="<%= child.userAvatar %>" alt="avatar" referrerpolicy="no-referrer" ><%= child.userName %></div>
-            <div class="title">Date </div>
-            <div class="info"><%= child.date.toLocaleDateString() %></div>
-            <div class="title">Time </div>
-            <div class="info"><%= child.time %></div>
-            <div class="title">Location </div>
-            <div class="info"><%= child.location %></div>
-            <div class="title">Number of Kids </div>
-            <div class="info"><%= child.numOfKids %></div>
+            <div class="title div-1">Requested By </div>
+            <div class="request-user info div-1"><%= child.userName %></div>
+            <div class="title div-2">Date </div>
+            <div class="info div-2"><%= child.date.toLocaleDateString('en-US', {timeZone: 'UTC'}) %></div>
+            <div class="title div-3">Time </div>
+            <div class="info div-3"><%= child.time %></div>
+            <div class="title div-4">Location </div>
+            <div class="info div-4"><%= child.location %></div>
         </div>
         <div class="column">
-            <div class="title">Names & Ages of Kids </div>
-            <div class="info"><%= child.namesAgesOfKids %></div>
-            <div class="title">Special Instructions </div>
-            <div class="info"><%= child.specialInstructions %></div>
-            <div class="title">Fulfilled? </div>
-            <div class="info">
+            <div class="title div-5">Number of Kids </div>
+            <div class="info div-5"><%= child.numOfKids %></div>
+            <div class="title div-6">Names & Ages of Kids </div>
+            <div class="info div-6"><%= child.namesAgesOfKids %></div>
+            <div class="title div-7">Special Instructions </div>
+            <div class="info div-7"><%= child.specialInstructions %></div>
+            <div class="title div-8">Fulfilled? </div>
+            <div class="info div-8">
                 <% if (child.fulfilled.length) { %>
                     <a href="/children/<%= child._id %>/fulfillments">Yes</a>
                 <% } else { %>
@@ -31,6 +31,8 @@
          </div>
         <% if (child.fulfilled.length || user?._id.equals(child.user)) { %>
             <input style="display: none;" class="btn" type="button" value="Provide care" />
+        <% } else if (user?._id.equals(child.user)) { %>
+            <input class="btn" type="button" value="Edit care request" />
         <% } else { %>
             <input onclick="location.href='/children/<%= child._id %>/fulfillments/new';" class="btn" type="button" value="Provide care" />
         <% } %>

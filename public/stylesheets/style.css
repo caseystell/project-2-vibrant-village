@@ -140,16 +140,22 @@ table {
   margin-right: auto;
 }
 
-#child-show-page {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-.title {
+.title, label {
   font-weight: bold;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2.25vmin;
   padding: 1.5vmin;
 }
 
+#child-show-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+@media screen and (max-width: 600px) {
+  #child-show-page {
+    display: block;
+    width: 100%;
+  }
+}

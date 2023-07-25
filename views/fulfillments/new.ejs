@@ -2,9 +2,12 @@
 
 <h2><%= title %></h2>
 
+<h5>Please provide a phone number for questions:</h5>
+
 <form id="new-fulfillment-form" action="/children/<%= child._id %>/fulfillments" method="POST">
     <label>Phone</label>
     <input type="number" name="phone">
+    <br>
     <input class="btn" type="submit" value="Fulfill this request!">
 </form>
 

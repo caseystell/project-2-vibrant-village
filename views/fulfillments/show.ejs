@@ -7,7 +7,7 @@
         <table>
           <thead>
             <tr>
-              <th>User</th>
+              <th>Care Provider</th>
               <th>Date Fulfilled</th>
               <th>Phone</th>
               <th></th>
@@ -16,7 +16,7 @@
           <tbody>
             <% child.fulfilled.forEach(function(f) { %>
               <tr>
-                <td class="fulfillment-user"><img alt="avatar" src="<%= f.userAvatar %>" referrerpolicy="no-referrer" ><%= f.userName %></td>
+                <td class="fulfillment-user"><%= f.userName %></td>
                 <td><%= f.createdAt.toLocaleDateString() %></td>
                 <td><%= f.phone %></td>
                 <td>

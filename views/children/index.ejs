@@ -19,13 +19,12 @@
         <th>Location</th>
         <th>Fulfilled?</th>
         <th></th>
-        <th>Delete Request</th>
       </tr>
     </thead>
     <tbody>
         <% children.forEach(function(child) { %>
             <tr id="care-request-log">
-                <td class="request-user"><img src="<%= child.userAvatar %>" alt="avatar" referrerpolicy="no-referrer" ><%= child.userName %></td>
+                <td class="request-user"><%= child.userName %></td>
                 <td><%= child.date.toLocaleDateString() %></td>
                 <td><%= child.time %></td>
                 <td><%= child.location %></td>
@@ -37,12 +36,6 @@
                     <% } %>
                 </td>
                 <td><input onclick="location.href='/children/<%= child._id %>';" class="btn" type="button" value="Details" /></td>
-                <td><% if (user?._id.equals(child.user)) { %>
-                    <form action="/children/<%= child._id %>?_method=DELETE" method="POST">
-                      <button type="submit">X</button>
-                    </form>
-                  <% } %>
-                </td>
             </tr>
         <% }); %>
     </tbody>
