@@ -5,6 +5,7 @@ module.exports = {
   show,
   new: newChildcareRequest,
   create,
+  delete: deleteRequest
 };
 
 async function index(req, res) {
@@ -23,9 +24,7 @@ function newChildcareRequest(req, res) {
 }
 
 async function create(req, res) {
-  // convert childCare's checkbox of nothing or "on" to boolean
   req.body.childCare = !!req.body.childCare;
-  // Remove empty properties so that defaults will be applied
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key];
   }
@@ -36,4 +35,12 @@ async function create(req, res) {
     console.log(err);
     res.render("children/new", { errorMsg: err.message });
   }
+}
+
+async function deleteRequest(req, res) {
+  const child = await Child.findOne({ _id: req.params.id });
+  if (!child) return res.redirect("/children");
+  child.remove(req.params.id);
+  await child.save();
+  res.redirect("/children");
 }

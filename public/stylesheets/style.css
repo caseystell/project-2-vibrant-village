@@ -109,7 +109,7 @@ table thead th {
   margin-right: auto;
 }
 
-table td {
+table td, .info {
   padding: 10px;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: lighter;
@@ -139,3 +139,17 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
+
+#child-show-page {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.25vmin;
+  padding: 1.5vmin;
+}
+

@@ -19,10 +19,6 @@ const fulfillmentSchema = new Schema({
 });
   
 const childSchema = new Schema({
-    childCare: {
-        type: Boolean,
-        default: false,
-    },
     date: {
         type: Date,
         min: function() {
@@ -53,7 +49,14 @@ const childSchema = new Schema({
         required: true,
     },
     specialInstructions: String,
-    fulfilled: [fulfillmentSchema]
+    fulfilled: [fulfillmentSchema],
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true
+    },
+    userName: String,
+    userAvatar: String
 }, {
     timestamps: true
 });
