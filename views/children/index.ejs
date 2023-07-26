@@ -5,10 +5,8 @@
 <input onclick="location.href='/children/new';" class="btn" type="button" value="New care request" />
 
 <label>Show only unfulfilled requests</label>
-<input id="unfulfilled-btn" class="btn" type="checkbox" name="unfulfilled" onclick="hide('care-request-log')" unchecked />
-<% // if ("unfulfilled-btn" && child.fulfilled.length) { %>
-    <% // care-request-log.style.display === "none" %>
-<% // } %>
+<input id="unfulfilled-btn" class="btn" type="checkbox" name="unfulfilled" unchecked />
+
 
 <table id="list">
     <thead>
@@ -33,6 +31,9 @@
                         <a href="children/<%= child._id %>/fulfillments">Yes</a>
                     <% } else { %>
                         No
+                    <% } %>
+                    <% if ("#unfulfilled-btn".checked && child.fulfilled === "Yes") { %>
+                        <% "#care-request-log".style.display === "none" %>
                     <% } %>
                 </td>
                 <td><input onclick="location.href='/children/<%= child._id %>';" class="btn" type="button" value="Details" /></td>
