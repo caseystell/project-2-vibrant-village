@@ -24,7 +24,7 @@
                 <td>
                   <% if (user?._id.equals(f.user)) { %>
                     <form action="/fulfillments/<%= f._id %>?_method=DELETE" method="POST">
-                      <button type="submit">Delete</button>
+                      <button type="submit" class="btn">Delete</button>
                     </form>
                   <% } else { %>
                     Action not available

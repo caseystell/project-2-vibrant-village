@@ -33,8 +33,6 @@ async function create(req, res) {
 
 async function deleteRequest(req, res) {
   const child = await Child.findOne({ "fulfilled._id": req.params.id, "fulfilled.user": req.user._id });
-  // if (!child) return res.redirect("/children");
-  console.log(`The child object is ${child}`);
   child.fulfilled.remove(req.params.id);
   await child.save();
   res.redirect(`/children/${child._id}`);

@@ -8,7 +8,7 @@
             <div class="request-user info div-1"><%= child.userName %></div>
             <div class="title div-2">Date </div>
             <div class="info div-2"><%= child.date.toLocaleDateString('en-US', {timeZone: 'UTC'}) %></div>
-            <div class="title div-3">Time </div>
+            <div class="title div-3">Time/Duration </div>
             <div class="info div-3"><%= child.time %></div>
             <div class="title div-4">Location </div>
             <div class="info div-4"><%= child.location %></div>
@@ -32,10 +32,9 @@
         <% if (child.fulfilled.length || user?._id.equals(child.user)) { %>
             <input style="display: none;" class="btn" type="button" value="Provide care" />
             <% if (user?._id.equals(child.user)) { %>
-                <input class="btn" type="button" value="Edit care request" />
-                <!-- <form action="/children/ <%= // child._id %>?_method=DELETE" method="POST">
-                    <input class="btn" type="button" value="Delete care request" />
-                </form> -->
+                <form action="/children/<%= child._id %>?_method=DELETE" method="POST">
+                  <input type="submit" class="btn" value="Delete care request" />
+                </form>
             <% } %>
         <% } else { %>
             <input onclick="location.href='/children/<%= child._id %>/fulfillments/new';" class="btn" type="button" value="Provide care" />

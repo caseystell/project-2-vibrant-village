@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-<img src="./public/images/Vibrant_Village_Header.jpg" alt="Vibrant Village" height="200" width="500"/>
+<img src="./public/images/Vibrant_Village_Header.jpg" alt="Vibrant Village" height="150" width="700"/>
 
 <h2 align="center">
     <a href="https://vibrant-village-6e72f0c47e7c.herokuapp.com/" target="_blank" rel="noopener noreferrer" >Vibrant Village</a>
@@ -33,14 +33,14 @@
 
 ## About The Project
 
-<p><span style="font-weight:bold">Raising the next generation doesn't have to take the life out of you.</span>Most modern caregivers don't have access to the village support system of generations past. We created Vibrant Village so that your family can grow and thrive while surrounded by a customizable community of support.</p>
+<p><span style="font-weight:bolder">Raising the next generation doesn't have to take the life out of you.</span> Most modern caregivers don't have access to the village support system of generations past. We created Vibrant Village so that your family can grow and thrive while surrounded by a customizable community of support.</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Game Images
 
 <img src="./public/images/Vibrant_Village_Homepage.jpg" alt="Vibrant Village Homepage" height="600" width="450" display="inline-block"/>
-<img src="./public/images/Vibrant_Village_Header.jpg" alt="Vibrant Village Care Needs" height="550" width="480" display="inline-block"/>
+<img src="./public/images/Vibrant_Village_Schedule.jpg" alt="Vibrant Village Care Needs" height="400" width="600" display="inline-block"/>
 <img src="./public/images/Vibrant_Village_Request_Care_Page.jpg" alt="Vibrant Village Request Care Page" height="400" width="550" display="inline-block"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -64,7 +64,7 @@
 <h5>Click <a href="https://vibrant-village-6e72f0c47e7c.herokuapp.com/" target="_blank" rel="noopener noreferrer" >here</a> to visit the site!</h5>
 <ol>
     <li>Log in using your Google account</li>
-    <li>If you are looking to request child care, click the "Request care" button on the home page. Fill out your child care request details, and submit! Delete the care request if care is no longer needed.</li>
+    <li>If you are looking to request child care, click the "Request care" button on the home page. Fill out your child care request details, and submit!</li>
     <li>If you are looking to fulfill another user's child care request, click the "Provide care" button the home page. Review the schedule of care needs to find a date, time, and location that works with your availability, and sign up to provide care. Commitments to provide care can be deleted if you become unavailable.</li>
 </ol>
 
@@ -74,6 +74,7 @@
 
 <h4>In future versions, we hope to roll out the following features:</h4>
 <ul>
+    <li>Users can edit previously submitted care requests.</li>
     <li>Users can create a customized profile of children, preferred care locations, and child care experience and preferences.</li>
     <li>Users can filter care requests by date and time to more easily find a care request that matches their availability.</li>
     <li>Users can receive notifications for care requests when another user signs up to provide care for that request.</li>

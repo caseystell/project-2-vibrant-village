@@ -59,7 +59,7 @@ h4 {
   font-size: 4vmin;
 }
 
-input {
+input, button {
   background-color: rgb(255, 229, 212);
   border-radius: 5%;
   border-color: rgb(255, 229, 212);
