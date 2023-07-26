@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-<img src="./public/images/Vibrant_Village_Header.jpg" alt="Vibrant Village" height="150" width="700"/>
+<img src="./public/images/Vibrant_Village_Header.jpg" alt="Vibrant Village" height="100" width="700"/>
 
 <h2 align="center">
     <a href="https://vibrant-village-6e72f0c47e7c.herokuapp.com/" target="_blank" rel="noopener noreferrer" >Vibrant Village</a>
@@ -40,7 +40,7 @@
 ## Game Images
 
 <img src="./public/images/Vibrant_Village_Homepage.jpg" alt="Vibrant Village Homepage" height="600" width="450" display="inline-block"/>
-<img src="./public/images/Vibrant_Village_Schedule.jpg" alt="Vibrant Village Care Needs" height="400" width="600" display="inline-block"/>
+<img src="./public/images/Vibrant_Village_Schedule.jpg" alt="Vibrant Village Care Needs" height="400" width="700" display="inline-block"/>
 <img src="./public/images/Vibrant_Village_Request_Care_Page.jpg" alt="Vibrant Village Request Care Page" height="400" width="550" display="inline-block"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
