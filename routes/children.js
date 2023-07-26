@@ -13,5 +13,7 @@ router.get("/new", ensureLoggedIn, childrenCtrl.new);
 router.get("/:id", ensureLoggedIn, childrenCtrl.show);
 // POST /children
 router.post("/", ensureLoggedIn, childrenCtrl.create);
+// DELETE /children
+router.delete("/:id", ensureLoggedIn, childrenCtrl.delete);
 
 module.exports = router;

@@ -5,7 +5,7 @@
 <input onclick="location.href='/children/new';" class="btn" type="button" value="New care request" />
 
 <label>Show only unfulfilled requests</label>
-<input id="unfulfilled-btn" class="btn" type="checkbox" name="unfulfilled" unchecked />
+<input id="unfulfilled-btn" class="btn" type="checkbox" name="unfulfilled" unchecked/>
 
 
 <table id="list">
@@ -26,15 +26,21 @@
                 <td><%= child.date.toLocaleDateString() %></td>
                 <td><%= child.time %></td>
                 <td><%= child.location %></td>
-                <td>
+                <td id="fulfilled-status">
                     <% if (child.fulfilled.length) { %>
                         <a href="children/<%= child._id %>/fulfillments">Yes</a>
                     <% } else { %>
                         No
                     <% } %>
-                    <% if ("#unfulfilled-btn".checked && child.fulfilled === "Yes") { %>
-                        <% "#care-request-log".style.display === "none" %>
-                    <% } %>
+                    <!-- <% // if (child.fulfilled === "Yes") { %>
+                        <script type="text/javascript">
+                            const careReqLogEl = document.getElementById("care-request-log");
+                            const unfulfilledBtnEl = document.getElementById("unfulfilled-btn");
+                            if (unfulfilledBtnEl.checked) {
+                                careReqLogEl.style.visibility === "hidden";
+                            }
+                        </script>
+                    <% // } %> -->
                 </td>
                 <td><input onclick="location.href='/children/<%= child._id %>';" class="btn" type="button" value="Details" /></td>
             </tr>

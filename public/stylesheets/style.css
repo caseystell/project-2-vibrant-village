@@ -90,7 +90,7 @@ input {
   text-align: right;
 }
 
-.login:hover, .logout:hover {
+.login:hover, .logout:hover, a:hover {
   text-decoration: underline;
 }
 
@@ -205,3 +205,15 @@ span {
   text-align: center;
 }
 
+img {
+  height: 30px;
+  width: 30px;
+}
+
+a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2vmin;
+  font-weight: lighter;
+  color: rgb(255, 109, 39);
+  text-decoration: none;
+}

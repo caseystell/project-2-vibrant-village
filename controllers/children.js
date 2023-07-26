@@ -24,7 +24,8 @@ function newChildcareRequest(req, res) {
 }
 
 async function create(req, res) {
-  req.body.childCare = !!req.body.childCare;
+  req.body.user = req.user._id;
+  req.body.userName = req.user.name;
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key];
   }

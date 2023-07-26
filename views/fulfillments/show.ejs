@@ -11,7 +11,7 @@
               <th>Date Fulfilled</th>
               <th>Phone</th>
               <th>Details</th>
-              <th></th>
+              <th>Remove</th>
             </tr>
           </thead>
           <tbody>
@@ -24,8 +24,10 @@
                 <td>
                   <% if (user?._id.equals(f.user)) { %>
                     <form action="/fulfillments/<%= f._id %>?_method=DELETE" method="POST">
-                      <button type="submit">X</button>
+                      <button type="submit">Delete</button>
                     </form>
+                  <% } else { %>
+                    Action not available
                   <% } %>
                 </td>
               </tr>

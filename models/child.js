@@ -5,6 +5,7 @@ const fulfillmentSchema = new Schema({
     phone: {
         type: Number,
         pattern: /^(\+0?1\s?)?\(?\d{3}\d{3}\d{4}/,
+        max: 19999999999,
         required: true,
     },
     details: String,
@@ -23,10 +24,6 @@ const childSchema = new Schema({
         type: Date,
         min: function() {
             let today = new Date().toLocaleDateString('en-US', {timeZone: 'UTC'});
-            // let day = String(today.getDate()).padStart(2, '0');
-            // let month = String(today.getMonth() + 1).padStart(2, '0');
-            // let year = today.getFullYear();
-            // today = `${month}/${day}/${year}`;
             return today;
         },
         required: true,
@@ -53,6 +50,7 @@ const childSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
+        required: true
     },
     userName: String,
 }, {

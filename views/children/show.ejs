@@ -31,8 +31,12 @@
          </div>
         <% if (child.fulfilled.length || user?._id.equals(child.user)) { %>
             <input style="display: none;" class="btn" type="button" value="Provide care" />
-        <% } else if (user?._id.equals(child.user)) { %>
-            <input class="btn" type="button" value="Edit care request" />
+            <% if (user?._id.equals(child.user)) { %>
+                <input class="btn" type="button" value="Edit care request" />
+                <!-- <form action="/children/ <%= // child._id %>?_method=DELETE" method="POST">
+                    <input class="btn" type="button" value="Delete care request" />
+                </form> -->
+            <% } %>
         <% } else { %>
             <input onclick="location.href='/children/<%= child._id %>/fulfillments/new';" class="btn" type="button" value="Provide care" />
         <% } %>
