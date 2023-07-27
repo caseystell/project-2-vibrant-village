@@ -32,14 +32,14 @@
         <% if (child.fulfilled.length || user?._id.equals(child.user)) { %>
             <input style="display: none;" class="btn" type="button" value="Provide care" />
             <% if (user?._id.equals(child.user)) { %>
-                <form action="/children/<%= child._id %>?_method=DELETE" method="POST">
+                <form id="delete-btn" action="/children/<%= child._id %>?_method=DELETE" method="POST">
                   <input type="submit" class="btn" value="Delete care request" />
                 </form>
             <% } %>
         <% } else { %>
             <input onclick="location.href='/children/<%= child._id %>/fulfillments/new';" class="btn" type="button" value="Provide care" />
         <% } %>
-        <input onclick="location.href='/children';" class="btn" type="button" value="See all care requests" />
+        <input onclick="location.href='/children';" class="btn" type="button" value="See all care requests" style="width: 22vmin; justify-self: center;" />
     </section>
 
 <%- include("../partials/footer") %>

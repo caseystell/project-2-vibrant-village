@@ -5,7 +5,7 @@ module.exports = {
   show,
   new: newChildcareRequest,
   create,
-  delete: deleteRequest
+  delete: deleteRequest,
 };
 
 async function index(req, res) {

@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-<img src="./public/images/Vibrant_Village_Header.jpg" alt="Vibrant Village" height="100" width="700"/>
+<img src="./public/images/Vibrant_Village_Header.jpg" alt="Vibrant Village" height="100" width="650"/>
 
 <h2 align="center">
     <a href="https://vibrant-village-6e72f0c47e7c.herokuapp.com/" target="_blank" rel="noopener noreferrer" >Vibrant Village</a>
@@ -40,7 +40,7 @@
 ## Game Images
 
 <img src="./public/images/Vibrant_Village_Homepage.jpg" alt="Vibrant Village Homepage" height="600" width="450" display="inline-block"/>
-<img src="./public/images/Vibrant_Village_Schedule.jpg" alt="Vibrant Village Care Needs" height="400" width="700" display="inline-block"/>
+<img src="./public/images/Vibrant_Village_Schedule.jpg" alt="Vibrant Village Care Needs" height="400" width="725" display="inline-block"/>
 <img src="./public/images/Vibrant_Village_Request_Care_Page.jpg" alt="Vibrant Village Request Care Page" height="400" width="550" display="inline-block"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -64,7 +64,7 @@
 <h5>Click <a href="https://vibrant-village-6e72f0c47e7c.herokuapp.com/" target="_blank" rel="noopener noreferrer" >here</a> to visit the site!</h5>
 <ol>
     <li>Log in using your Google account</li>
-    <li>If you are looking to request child care, click the "Request care" button on the home page. Fill out your child care request details, and submit!</li>
+    <li>If you are looking to request child care, click the "Request care" button on the home page. Fill out your child care request details, and submit! Delete any care requests you no longer need.</li>
     <li>If you are looking to fulfill another user's child care request, click the "Provide care" button the home page. Review the schedule of care needs to find a date, time, and location that works with your availability, and sign up to provide care. Commitments to provide care can be deleted if you become unavailable.</li>
 </ol>
 
