@@ -1,5 +1,9 @@
 <%- include("../partials/header") %>
 
+<div>
+    <img src="/images/lora-moore-kakaletris-K0lyROlsQ9Q-unsplash.jpg" alt="kids-covering-faces"/>
+</div>
+
 <h2><%= title %></h2>
 
 <input onclick="location.href='/children/new';" class="btn" type="button" value="New care request" />
@@ -19,7 +23,7 @@
         <% children.forEach(function(child) { %>
             <tr id="care-request-log">
                 <td class="request-user"><%= child.userName %></td>
-                <td><%= child.date.toLocaleDateString() %></td>
+                <td><%= child.date.toLocaleDateString('en-US', {timeZone: 'UTC'}) %></td>
                 <td><%= child.time %></td>
                 <td><%= child.location %></td>
                 <td id="fulfilled-status">
@@ -28,15 +32,6 @@
                     <% } else { %>
                         No
                     <% } %>
-                    <!-- <% // if (child.fulfilled === "Yes") { %>
-                        <script type="text/javascript">
-                            const careReqLogEl = document.getElementById("care-request-log");
-                            const unfulfilledBtnEl = document.getElementById("unfulfilled-btn");
-                            if (unfulfilledBtnEl.checked) {
-                                careReqLogEl.style.visibility === "hidden";
-                            }
-                        </script>
-                    <% // } %> -->
                 </td>
                 <td><input onclick="location.href='/children/<%= child._id %>';" class="btn" type="button" value="Details" /></td>
             </tr>

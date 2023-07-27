@@ -59,12 +59,7 @@ h4 {
   font-size: 4vmin;
 }
 
-form:not(#delete-btn) {
-  text-align: left;
-  margin: 10px 50px;
-}
-
-input, button, .btn {
+input, button {
   background-color: rgb(255, 229, 212);
   border-radius: 5%;
   border-color: rgb(255, 229, 212);
@@ -127,7 +122,7 @@ footer {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5vmin;
   font-weight: lighter;
-  margin: auto;
+  margin: 5vmin auto 5vmin auto;
 }
 
 table {
@@ -188,6 +183,11 @@ span {
   font-size: 2.25vmin;
 }
 
+form {
+  text-align: left;
+  margin: 10px 50px;
+}
+
 #new-childcare-request-form {
   width: 100%;
   background-image: url("../images/kelly-sikkema-XX2WTbLr3r8-unsplash.jpg");
@@ -206,8 +206,9 @@ span {
 }
 
 img {
-  height: 30px;
-  width: 30px;
+  height: 45vmin;
+  width: 90vmin;
+  margin: auto;
 }
 
 a {
@@ -217,3 +218,12 @@ a {
   color: rgb(255, 109, 39);
   text-decoration: none;
 }
+
+#delete-form {
+  margin: 0;
+  justify-self: center;
+}
+
+
+
+
