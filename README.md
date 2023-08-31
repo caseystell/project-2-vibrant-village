@@ -39,7 +39,7 @@
 
 ## Game Images
 
-<img src="./public/images/Vibrant_Village_Homepage.jpg" alt="Vibrant Village Homepage" height="600" width="450" display="inline-block"/>
+<img src="./public/images/Homepage-VV.png" alt="Vibrant Village Homepage" height="600" width="450" display="inline-block"/>
 <img src="./public/images/Vibrant_Village_Schedule.jpg" alt="Vibrant Village Care Needs" height="400" width="725" display="inline-block"/>
 <img src="./public/images/Vibrant_Village_Request_Care_Page.jpg" alt="Vibrant Village Request Care Page" height="400" width="550" display="inline-block"/>
 
