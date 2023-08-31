@@ -8,6 +8,8 @@
 
 <input onclick="location.href='/children/new';" class="btn" type="button" value="New care request" />
 
+<input onclick="filterSelection('fulfilled-status')" class="btn" type="button" value="Show only unfulfilled"/>
+
 <table id="list">
     <thead>
       <tr>
@@ -22,18 +24,18 @@
     <tbody>
         <% children.forEach(function(child) { %>
             <tr id="care-request-log">
-                <td class="request-user"><%= child.userName %></td>
-                <td><%= child.date.toLocaleDateString('en-US', {timeZone: 'UTC'}) %></td>
-                <td><%= child.time %></td>
-                <td><%= child.location %></td>
-                <td id="fulfilled-status">
+                <td class="tbl-data"><%= child.userName %></td>
+                <td class="tbl-data"><%= child.date.toLocaleDateString('en-US', {timeZone: 'UTC'}) %></td>
+                <td class="tbl-data"><%= child.time %></td>
+                <td class="tbl-data"><%= child.location %></td>
+                <td class="tbl-data" id="fulfilled-status">
                     <% if (child.fulfilled.length) { %>
                         <a href="children/<%= child._id %>/fulfillments">Yes</a>
                     <% } else { %>
                         No
                     <% } %>
                 </td>
-                <td><input onclick="location.href='/children/<%= child._id %>';" class="btn" type="button" value="Details" /></td>
+                <td class="tbl-data"><input onclick="location.href='/children/<%= child._id %>';" class="btn" type="button" value="Details" /></td>
             </tr>
         <% }); %>
     </tbody>
