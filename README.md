@@ -22,7 +22,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#game-images">App Images</a></li>
+        <li><a href="#app-images">App Images</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -37,7 +37,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Game Images
+## App Images
 
 <img src="./public/images/Homepage-VV.png" alt="Vibrant Village Homepage" height="400" width="725" display="inline-block"/>
 <img src="./public/images/Vibrant_Village_Schedule.jpg" alt="Vibrant Village Care Needs" height="400" width="725" display="inline-block"/>
