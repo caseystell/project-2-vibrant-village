@@ -22,7 +22,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#game-images">Game Images</a></li>
+        <li><a href="#game-images">App Images</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
